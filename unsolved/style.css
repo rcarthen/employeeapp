@@ -1,0 +1,11 @@
+body {background-color: aquamarine;
+    
+}
+
+.sidenav {background-color: whitesmoke; 
+    text-align: center; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 30px;
+    padding: 20px;
+    height:100%;
+};
