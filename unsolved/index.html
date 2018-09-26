@@ -2,53 +2,58 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet"  href="style.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div id="mySidenav" class="sidenav">     
+    <div id="mySidenav" class="sidenav">
         <a id="view">View</a>
         <a id="add">Add</a>
         <a id="verify">Verify</a>
         <a id="update">Update</a>
         <a id="delete">Delete</a>
-      </div>
-  
-      <div class="top main">
-    <div id="addElements" style="display:none">
-        Name: <input type="text" id="name">;
-        Office Num: <input type="number" id="officenum">;  
-        Phone Num: <input type="tel" id="phonenum">;
-        <button id="addEmp">Add</button>
     </div>
-    
-    <div id="verifyElements" style="display:none">
-        Name: <input type="text" id="verifyname">;
-        
-        <button id="verifyEmp">Verify</button>
+
+    <div class="top main">
+
+        <div id="displayElements" style="display:none">
+
+        </div>
+
+        <div id="addElements" style="display:none">
+            Name: <input type="text" id="name">;
+            Office Num: <input type="number" id="officenum">
+            Phone Num: <input type="tel" id="phonenum">
+            <button id="addEmp">Add</button>
+        </div>
+
+        <div id="verifyElements" style="display:none">
+            Name: <input type="text" id="verifyname">
+
+            <button id="verifyEmp">Verify</button>
+        </div>
+
+        <div id="updateElements" style="display:none">
+            Name: <input type="text" id="updateName">
+            Office Num: <input type="number" id="updateOfficenum">
+            Phone Num: <input type="tel" id="updatePhonenum">
+            <button id="updateEmp">Update</button>
+        </div>
+        <div id="deleteElements" style="display:none">
+            Name: <input type="text" id="deleteName">
+            <button id="deleteEmp">Delete</button>
+        </div>
+
     </div>
-    
-    <div id="updateElements" style="display:none">
-        Name: <input type="text" id="updateName">;
-        Office Num: <input type="number" id="updateOfficenum">;  
-        Phone Num: <input type="tel" id="updatePhonenum">;
-        <button id="updateEmp">Update</button>
-    </div>
-    <div id="deleteElements" style="display:none">
-        Name: <input type="text" id="deleteName">;
-        <button id="deleteEmp">Delete</button>
-    </div>
-    
-  </div>    
-  <div class="content"></div>
-  <script src="dom.js"></script>
-  <script src="employeeList.js"></script>
-  <script src="app.js"></script> 
+    <div class="content"></div>
+    <script src="dom.js"></script>
+    <script src="employeeList.js"></script>
+    <script src="app.js"></script>
 </body>
 
 

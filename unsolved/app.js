@@ -1,5 +1,7 @@
 const displayEmployees = function (){
     $('.content').empty();
+    clearTopElements();
+    document.getElementById('displayElements').style.display = 'inline';
     render();
     
          
@@ -9,6 +11,7 @@ const clearTopElements = function(){
     document.getElementById('addElements').style.display = 'none';
     document.getElementById('verifyElements').style.display = 'none';
     document.getElementById('updateElements').style.display = 'none';
+    document.getElementById('deleteElements').style.display='none';
 }
 
 const displayAddEmployee = function(){
@@ -97,20 +100,20 @@ const updateEmployee = function(){
 
 }
 
+
 const deleteEmployee = function(){
-    let contact = $("#deleteName").val() 
-  for (let i=0; i < employeeList.length; i++){ 
-    console.log("NAme on Object" , employeeList[i].name)
-    console.log("Name im comparing", contact);
-    if(contact === employeeList[i].name){
+    let deletecontact = $("#deleteName").val(); 
+    for (let i=0; i < employeeList.length; i++){ 
+   
+    if(deletecontact === employeeList[i].name){ 
 
-        console.log("Match");
-    }
+      employeeList.splice(i,1)
+    } 
 
-
-
-   };
 }
+displayEmployees();
+}
+
 //displayEmployees();
 $("#view").on("click", displayEmployees); // I want all employees to display
 $("#add").on("click", displayAddEmployee); //add an employee name, push into my array
@@ -119,5 +122,5 @@ $("#verify").on("click", displayVerifyEmployee);//verify if an employee is on th
 $("#verifyEmp").on("click", verifyEmployee);//verify if an employee is on the list
 $("#update").on("click", displayUpdateEmployee);
 $("#updateEmp").on("click", updateEmployee); //update employee info 
-$("#delete").on("click", displayDeleteEmployee);//delete employee name from list bracket notation
+$("#delete").on("click", displayDeleteEmployee);//delete employee name from the array of objects
 $("#deleteEmp").on("click", deleteEmployee); //delete an employee from the List
